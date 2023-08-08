@@ -10,7 +10,7 @@ python 3.6+
 
 ## installation
 
-download `igen.py` and place it in the root directory of your site.
+download `igen.py`.
 
 ## usage
 

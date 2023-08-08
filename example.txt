@@ -1,0 +1,7 @@
+this line will be used as the link's text
+
+You can make an index.html file with a link to this file by running:
+
+python3 igen.py example.txt
+
+This will create/overwrite the index.html file.

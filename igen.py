@@ -13,7 +13,7 @@ INDEX_HTML_PREFIX = """<!DOCTYPE html>
     <title>index</title>
 </head>
 <body>
-    <h1>My Webbed Site</h1>
+    <h1>index</h1>
     <ul>
 """
 

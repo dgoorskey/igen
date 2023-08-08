@@ -21,12 +21,17 @@ def eprint(message: str) -> None:
 
 def get_file_title(file_path: str) -> str:
     title = ''
-    with open(file_path, 'r') as file:
-        title = file.readline() # title is first line
+    try:
+        with open(file_path, 'r') as file:
+            title = file.readline() # title is first line
 
-        # strip only newlines from end of title
-        while title.endswith('\n'):
-            title = title[:-1]
+    except EnvironmentError as e:
+        eprint(f'failed to open {file_path}: {e}')
+        sys.exit(-1)
+
+    # strip only newlines from end of title
+    while title.endswith('\n'):
+        title = title[:-1]
 
     return title
 

@@ -24,8 +24,11 @@ download `igen.py`.
 
 ## how links are generated
 
-1. file paths passed in as arguments are prepended with `/` to make them
-   absolute paths. be mindful about where your working directory is.
-2. the first line of each file is taken to be its title
-3. a link of the form `<a href="/path/to/myfile.txt">my file's title</a>` is
+1. file paths passed in as arguments are sorted alphabetically.
+   if you're making a blog, i recommend prefixing your filenames with iso-8601
+   dates.
+2. file paths are prepended with `/` to make them absolute paths.
+   be mindful about where your working directory is.
+3. the first line of each file is taken to be its title
+4. a link of the form `<a href="/path/to/myfile.txt">my file's title</a>` is
    generated for each file.

@@ -1,3 +1,8 @@
+"""
+This program generates html code with links to a list of files.
+Typical usage: `python3 igen.py *.txt > index.html`.
+"""
+
 import sys
 
 INDEX_HTML_PREFIX = """<!DOCTYPE html>
@@ -17,9 +22,15 @@ INDEX_HTML_SUFFIX = """    </ul>
 </html>"""
 
 def eprint(message: str) -> None:
+    """
+    Prints a message to stderr in the form `ssg: my message`.
+    """
     print(f'ssg: {message}', file=sys.stderr)
 
 def get_file_title(file_path: str) -> str:
+    """
+    Given the path to a file, gets the first line in that file and returns it.
+    """
     title = ''
     try:
         with open(file_path, 'r') as file:
@@ -36,6 +47,10 @@ def get_file_title(file_path: str) -> str:
     return title
 
 def get_index_html(file_paths: list[str]) -> str:
+    """
+    Generates html code with links to all the files in `file_paths`.
+    The titles of the links are given by the `get_file_title` function.
+    """
     index_html = INDEX_HTML_PREFIX
 
     # generate nav links

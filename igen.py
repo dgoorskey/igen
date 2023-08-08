@@ -17,7 +17,7 @@ INDEX_HTML_SUFFIX = """    </ul>
 </html>"""
 
 def eprint(message: str) -> None:
-    print(f'ssg: {message}')
+    print(f'ssg: {message}', file=sys.stderr)
 
 def get_file_title(file_path: str) -> str:
     title = ''
